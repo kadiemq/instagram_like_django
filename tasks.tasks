@@ -1,0 +1,33 @@
+Backend:
+    ✔ Create Registartion View @done (7/27/2021, 10:07:29 PM)
+    ✔ Create Login View @done (7/27/2021, 10:07:31 PM)
+    ✔ Create following table @done (7/28/2021, 5:26:57 PM)
+    ✔ automate creating following table @done (7/28/2021, 6:10:17 PM)
+    ✔ return list of accounts currently following @done (7/28/2021, 9:40:40 PM)
+    ✔ add update view for following @done (7/28/2021, 9:58:24 PM)
+    ✔ config signup process to create users and following entry @done (7/28/2021, 9:59:54 PM)
+    
+    Post Table:
+        ✔ create post table @done (7/28/2021, 10:32:26 PM)
+        ☐ add create view for post table
+        ☐ add retreieve view for post table
+        ☐ add delete view for post table
+
+
+
+    Post Comment Table:
+        ✔ create post_comment tabel @done (7/28/2021, 10:48:05 PM)
+        ☐ add create view for post_comment table
+        ✔ add delete view for post_comment table @done (7/28/2021, 11:09:13 PM)
+    
+
+    Post Likes Table:
+        ✔ create post_likes table @done (7/28/2021, 11:14:52 PM)
+        ✔ config posting process to create post and post_likes entry with zero likes @done (7/29/2021, 8:36:49 AM)
+        ✔ add update view for post_likes @done (7/29/2021, 8:36:51 AM)
+
+To do later:
+☐ Style Registartion View
+☐ Style Login View
+☐ create file for signals
+☐ make deletion only for creator user

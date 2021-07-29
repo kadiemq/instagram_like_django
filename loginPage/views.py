@@ -1,5 +1,12 @@
-from django.shortcuts import render
+from django.contrib.auth.views import LoginView
+from django.shortcuts import render, redirect
 
 # Create your views here.
-def loginPage(request):
-    return render(request, 'loginPage/index.html')
+from django.urls import reverse_lazy
+
+
+class loginPage(LoginView):
+    template_name = 'loginPage/index.html'
+    fields = '__all__'
+    redirect_authenticated_user = True
+

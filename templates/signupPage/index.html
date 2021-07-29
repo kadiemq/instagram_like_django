@@ -1,10 +1,23 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'signupPage/style.css' %}"/>
 </head>
 <body>
-    <h1>Signup Page Here</h1>
+    <section>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <input type="submit" name="Create Account">
+        </form>
+
+{#        <p>{% msgs %}</p>#}
+
+    </section>
 </body>
 </html>

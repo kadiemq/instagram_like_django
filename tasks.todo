@@ -1,0 +1,21 @@
+***Backend:
+✔ Create Registartion View @done (7/27/2021, 10:07:29 PM)
+✔ Create Login View @done (7/27/2021, 10:07:31 PM)
+☐ Create following table @timestamp(2021-07-28 14:38)
+☐ create post table @timestamp(2021-07-28 14:38)
+☐ create post_comment tabel @timestamp(2021-07-28 14:38)
+☐ create post_likes table @timestamp(2021-07-28 14:38)
+☐ config signup process to create users and following entry @timestamp(2021-07-28 14:38)
+☐ config posting process to create post and post_likes entry with zero likes @timestamp(2021-07-28 14:38)
+☐ add update view for following @timestamp(2021-07-28 14:38)
+☐ add create view for post table @timestamp(2021-07-28 14:38)
+☐ add retreieve view for post table @timestamp(2021-07-28 14:38)
+☐ add update view for post table @timestamp(2021-07-28 14:38)
+☐ add delete view for post table @timestamp(2021-07-28 14:38)
+☐ add create view for post_comment table @timestamp(2021-07-28 14:38)
+☐ add delete view for post_comment table @timestamp(2021-07-28 14:38)
+☐ add update view for post_likes @timestamp(2021-07-28 14:38)
+
+DO LATER:
+☐ Style Login View @timestamp(2021-07-28 15:24)
+☐ Style Registartion View @timestamp(2021-07-28 15:24)
