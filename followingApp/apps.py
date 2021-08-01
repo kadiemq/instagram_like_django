@@ -6,4 +6,4 @@ class FollowingappConfig(AppConfig):
     name = 'followingApp'
 
     def ready(self):
-        import followingApp.views
+        import followingApp.signals

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'postApp',
     'commentApp',
     'postLikes',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

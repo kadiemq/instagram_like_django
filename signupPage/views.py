@@ -15,7 +15,7 @@ class SignupView(CreateView):
     redirect_authenticated_user = True
 
     def dispatch(self, request, *args, **kwargs):
-        if request.user.is_authenticated and request.method == 'POST':
+        if request.user.is_authenticated:
             return redirect('homePage')
 
         return super(SignupView, self).dispatch(request, *args, **kwargs)

@@ -24,5 +24,6 @@ urlpatterns = [
     path('fapi/', include('followingApp.urls')),
     path('capi/', include('commentApp.urls')),
     path('lapi/', include('postLikes.urls')),
+    path('papi/', include('postApp.urls')),
 ]
 

@@ -1,24 +1,36 @@
 from django.contrib.auth.decorators import login_required
-from django.db.models.signals import post_save
-from django.dispatch.dispatcher import receiver
 from django.http.response import HttpResponse
-from django.shortcuts import render
+from rest_framework.generics import RetrieveAPIView, RetrieveUpdateAPIView
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+
 from postApp.models import Post
 from .models import Likes
-
-# Create your views here.
-@receiver(post_save, sender=Post)
-def createPostLikes(sender, instance, created, **kwargs):
-    if created:
-        Likes.objects.create(post=instance)
+from .serializer import PostLikesSerializer
 
 
-# @login_required()
-# def getFollowingList(request):
-#     user = request.user
-#     followingList = user.following.all()
-#     following_list = serializers.serialize('json', followingList)
-#     return JsonResponse({'data': following_list})
+class LikesList(RetrieveAPIView):
+    serializer_class = PostLikesSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        pk = self.kwargs['pk']
+        post = Likes.objects.get(post=pk).usersLikes.all()
+        return post
+
+    def retrieve(self, request, *args, **kwargs):
+        data = []
+
+        queryset = self.get_queryset()
+        # for user in queryset:
+
+        posts = queryset[0].likes_set
+        serializer = PostLikesSerializer(posts, many=True)
+        data.append(serializer.data)
+
+        data = sum(data, [])
+
+        return Response(data)
 
 
 @login_required()
@@ -28,6 +40,7 @@ def like(request, pk):
     likesTable = Likes.objects.get(post=post)
     likesTable.usersLikes.add(user)
     return HttpResponse('Done')
+
 
 @login_required()
 def unlike(request, pk):

@@ -6,4 +6,4 @@ class PostlikesConfig(AppConfig):
     name = 'postLikes'
 
     def ready(self):
-        import postLikes.views
+        import postLikes.signals

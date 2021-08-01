@@ -1,7 +1,7 @@
-from commentApp.views import deleteComment, getComments
+from commentApp.views import ListCreateComment, RetrieveUpdateDeleteComment
 from django.urls import path
 
 urlpatterns = [
-    path('getcomments/<int:pk>', getComments),
-    path('deletecomments/<int:pk>', deleteComment),
+    path('comments/<int:pk>', ListCreateComment.as_view()),
+    path('comment/<int:pk>', RetrieveUpdateDeleteComment.as_view()),
 ]
